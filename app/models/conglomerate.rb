@@ -1,0 +1,2 @@
+class Conglomerate < ApplicationRecord
+end

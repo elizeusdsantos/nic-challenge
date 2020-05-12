@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  subdomain: MyString
+  employees_number: 1
+  location: MyString
+  conglomerate: one
+
+two:
+  name: MyString
+  subdomain: MyString
+  employees_number: 1
+  location: MyString
+  conglomerate: two
