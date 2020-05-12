@@ -17,13 +17,14 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: postgres
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: nic-challenge_development
+  database: nic_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +58,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: nic-challenge_test
+  database: nic_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: nic-challenge_production
+  database: nic_production
   username: nic-challenge
   password: <%= ENV['NIC-CHALLENGE_DATABASE_PASSWORD'] %>
