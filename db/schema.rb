@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_12_183724) do
+ActiveRecord::Schema.define(version: 2020_05_12_202555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_05_12_183724) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["conglomerate_id"], name: "index_companies_on_conglomerate_id"
+    t.index ["subdomain"], name: "index_companies_on_subdomain", unique: true
   end
 
   create_table "conglomerates", force: :cascade do |t|
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_05_12_183724) do
     t.string "company_subdomains", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_conglomerates_on_name", unique: true
   end
 
   create_table "posts", force: :cascade do |t|
