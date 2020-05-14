@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  company_subdomains: MyString
+  name: conglomerateOne
+  company_subdomains: ["one", "two"]
 
 two:
-  name: MyString
-  company_subdomains: MyString
+  name: conglomerateTwo
+  company_subdomains: ["three", "four"]

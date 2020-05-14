@@ -2,12 +2,12 @@ require 'test_helper'
 
 class ConglomeratesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get conglomerates_index_url
+    get conglomerates_path
     assert_response :success
   end
 
   test "should get show" do
-    get conglomerates_show_url
+    get conglomerate_path(Conglomerate.first)
     assert_response :success
   end
 

@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  subdomain: MyString
+  name: "CompanyOne"
+  subdomain: "SubDomainOne"
   employees_number: 1
-  location: MyString
+  location: "-11111111,-11111111"
   conglomerate: one
 
 two:
-  name: MyString
-  subdomain: MyString
-  employees_number: 1
-  location: MyString
+  name: "CompanyTwo"
+  subdomain: "SubDomainTwo"
+  employees_number: 2
+  location: "-22222222,-22222222"
   conglomerate: two
