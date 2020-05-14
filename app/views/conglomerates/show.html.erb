@@ -1,0 +1,19 @@
+<h1>Conglomerates#show</h1>
+<p>Find me in app/views/conglomerates/show.html.erb</p>
+
+<p>
+    <%= @conglomerate.name %>
+</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+
+    <% @companies.each do |company| %>
+        <tr>
+            <td><%= company.name %></td>
+            <td><%= link_to 'View Details', company_url(subdomain: company.subdomain) %></td>
+        </tr>
+    <% end %>
+</table>
