@@ -1,19 +1,11 @@
-<h1>Conglomerates#show</h1>
-<p>Find me in app/views/conglomerates/show.html.erb</p>
+<h1>Companies located at <%= @conglomerate.name %></h1>
 
-<p>
-    <%= @conglomerate.name %>
-</p>
-
-<table>
-    <tr>
-        <th>Name</th>
-    </tr>
-
-    <% @companies.each do |company| %>
-        <tr>
-            <td><%= company.name %></td>
-            <td><%= link_to 'View Details', company_url(subdomain: company.subdomain) %></td>
-        </tr>
-    <% end %>
-</table>
+<div class="container">
+    <div>
+        <ul class="list-group">
+            <% @companies.each do |company| %>
+                <%= link_to company.name, company_url(subdomain: company.subdomain), class: "list-group-item list-group-item-action"%>
+            <% end %>
+        </ul>
+    </div>
+</div>
