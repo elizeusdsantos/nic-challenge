@@ -63,3 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'apartment'
 gem 'bootstrap', '~>4.4.1'
 gem 'jquery-rails'
+
+gem "graphql", "~> 1.9"
+
+gem 'graphiql-rails', group: :development
