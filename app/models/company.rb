@@ -1,8 +1,8 @@
 class Company < ApplicationRecord
-  after_create :update_conglomerate
+  after_create [:update_conglomerate, :create_tenant]
 
+  has_many :products
   belongs_to :conglomerate
-  after_create :create_tenant
   validates :subdomain, uniqueness: true
 
   private
