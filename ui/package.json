@@ -2,7 +2,6 @@
   "name": "ui",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
@@ -10,7 +9,7 @@
     "e2e": "ng e2e",
     "preinstall": "npm install -g node-gyp",
     "heroku-postbuild": "ng build",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build"
   },
   "private": true,
   "dependencies": {

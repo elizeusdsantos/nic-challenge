@@ -17,6 +17,11 @@
       "esnext.asynciterable"
     ]
   },
+  "exclude": [
+    "node_modules",
+    "public",
+    "vendor/bundle"
+  ],
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
