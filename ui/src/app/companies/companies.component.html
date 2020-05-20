@@ -1,0 +1,28 @@
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+  <tr>
+    <th class="mdl-data-table__cell--non-numeric">Name</th>
+    <th class="mdl-data-table__cell--non-numeric">subdomain</th>
+    <th class="mdl-data-table__cell--non-numeric">Number of employees</th>
+  </tr>
+  <tr *ngFor="let company of companies">
+    <td class="mdl-data-table__cell--non-numeric">{{company.name}}</td>
+    <td class="mdl-data-table__cell--non-numeric">{{company.subdomain}}</td>
+    <td class="mdl-data-table__cell--non-numeric">{{company.employeesNumber}}</td>
+  </tr>
+</table>
+
+<div class="paging">
+  <button
+    class="mdl-button mdl-js-button mdl-button--colored"
+    (click)="prevPage()"
+  >
+    <i class="material-icons">arrow_back</i>
+  </button>
+  Page {{page+1}}
+  <button
+    class="mdl-button mdl-js-button mdl-button--colored"
+    (click)="nextPage()"
+  >
+    <i class="material-icons">arrow_forward</i>
+  </button>
+</div>

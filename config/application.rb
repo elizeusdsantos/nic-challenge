@@ -12,6 +12,16 @@ module NicChallenge
     config.load_defaults 5.2
     config.middleware.use Apartment::Elevators::Subdomain
 
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource( '*',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options, :head]
+        )
+      end
+    end
+
     config.generators do |g|
       g.test_framework  false
       g.stylesheets     false
@@ -19,5 +29,6 @@ module NicChallenge
       g.helper          false
       g.channel         assets: false
     end
+
   end
 end
